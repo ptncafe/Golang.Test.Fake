@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"./controllers"
+	"ptncafe.test/controllers"
 )
 
 func setupRouter() *gin.Engine {
@@ -13,11 +13,11 @@ func setupRouter() *gin.Engine {
 	{
 		client.GET("/store/:id", controllers.Get)
 	}
-	
+
 	return r
 }
 
 func main() {
 	r := setupRouter()
-	r.Run(":12345") 
+	r.Run(":12345")
 }
