@@ -11,7 +11,7 @@ func setupRouter() *gin.Engine {
 
 	client := r.Group("/api")
 	{
-		client.GET("/store/:id", controllers.Get)
+		client.GET("/store/:id", controllers.GetStoreById)
 	}
 
 	return r
